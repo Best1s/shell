@@ -7,7 +7,7 @@ sed [-hnV][-e<script>][-f<script文件>][文本文件]
 -e 		script 在处理输入时，将script中指定的命令添加到已有的命令中
 -f 		file 在处理输入时，将file中指定的命令添加到已有的命令中
 -n 		不产生命令输出，使用print命令来完成输出
--h或--help 		显示帮助。
+-h或--help 	显示帮助。
 -V或--version 	显示版本信息。
 
 动作说明：
