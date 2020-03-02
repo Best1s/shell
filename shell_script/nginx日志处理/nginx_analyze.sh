@@ -9,8 +9,6 @@ else
 	echo "plase input nginx log path!"
 	exit 2
 fi
-#read -p "请输入日志开始时间(默认昨天 格式:$(date -d yesterday +"%d/%b/%Y"))" yesterday
-#yesterday=$(date -d yesterday +"%Y%m%d")
 read -p "请输入日志时间(默认昨天 格式:$(date -d yesterday +"%d/%b/%Y")) :" date
 if [ -z $date ];then
 	date=$(date -d yesterday +"%d/%b/%Y")
