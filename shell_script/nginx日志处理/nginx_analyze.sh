@@ -1,4 +1,8 @@
 #/usr/bin/sh
+if [ -z $1 ];then
+	echo "Usage: $0 nginix_log_path "
+	exit 2
+fi
 if [ -f $1 ];then
 	logfile=$1
 else
@@ -29,4 +33,4 @@ do
 	
 done
 #每秒钟的最高访问量,只要前300条数据
-awk -F '[' '{print $2}' $logfile | awk '{print $1}' | sort | uniq -c |sort -k1,1nr |head -n 300 >> max_everysec_pv_$1
+grep $date $logfile |awk -F '[' '{print $2}' | awk '{print $1}' | sort | uniq -c |sort -k1,1nr |head -n 300 >> max_everysec_pv_$1
